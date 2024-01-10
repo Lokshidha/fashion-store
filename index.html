@@ -1,64 +1,363 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Firebase_form</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stylotam</title>
+        <link rel="stylesheet" href="./src/css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/svg+xml" href="./images/header/favicon.svg">
     </head>
     <body>
-        <div class="box">
-            <div class="form">
-                <h2>Login Form</h2>
-                <form>
-                    <div class="inputbox">
-                        <input type="text" value="" id="username" required>
-                        <span>Username</span>
+        <img src="./images/header/headerprod.jpg" style="display: none;">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./images/header/logo.png" alt="comp" width="50px" ></a>
                     </div>
-                    <div class="inputbox">
-                        <input type="email" value="" id="email" required>
-                        <span>E-mail</span>
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" value="" id="phone" required>
-                        <span>Phone Number</span>
-                    </div>
-                    <input type="submit" value="submit" class="sub" id="submit">
-                </form>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="products.html">Products</a></li>
+                            <li class="nav-item"><a href="#footer">Contact Us</a></li>
+                            <li class="nav-item"><a href="home.html.html">Account</a></li>
+                        </ul>
+                    </nav>
+                    <a href="./cart.html"><img class="cart" src="./images/header/cart.svg"></a>
+                    <div class="toggle"><i class="fa fa-bars"></i></div>
+                </div>
             </div>
         </div>
-        
-        <script type="module">
-               // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-            import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-  
-  // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyA0PDTKHs6SekNAp1_vhtFD_uBHS3ieTLQ",
-              authDomain: "tamizhtrek-bce6d.firebaseapp.com",
-              projectId: "tamizhtrek-bce6d",
-              storageBucket: "tamizhtrek-bce6d.appspot.com",
-              messagingSenderId: "1016220147760",
-              appId: "1:1016220147760:web:de8671b998a675530a4df5",
-              measurementId: "G-8WKEE6CNRD"
-            };
-
-  // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-
-   //get ref to database services
-             const db = getDatabase(app);
-
-             document.getElementById("submit").addEventListener('click', function(e){
-              e.preventDefault();
-              set(ref(db, 'user/' + document.getElementById("username").value),
-              {
-   
-                username: document.getElementById("username").value,
-                email: document.getElementById("email").value,
-                PhoneNumber: document.getElementById("phone").value
-
-              });
-                alert("Login Sucessfull  !");
-             })
-        </script>
+        <div class="headerimg">
+            <h1>If you have everything under control, you're not moving fast enough!</h1>
+            <h3>Experience trekking like you have never before. Try our new sports fit with try-on experience</h3>
+            <a href="./product_details.html" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="offer">
+            <div class="small-container">
+                <div class="child">
+                    <div class="halfchild">
+                        <img src="./images/promos/exclusive.png" class="offer-img">
+                    </div>
+                    <div class="halfchild">
+                        <p>Exclusively available here</p>
+                        <h1>Nike</h1>
+                        <small>
+                            Elevate your style, master the art of confidence – where fashion meets swagger.<br>
+                        </small>
+                        <a href="./product_details.html" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <h2>Hot Releases</h2>
+            <div class="line1"></div>
+            <div class="child">
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-1.webp"></a>
+                    <h4>T-Shirts for Men</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹799</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-2.webp"></a>
+                    <h4>Sports Shoes </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₹499</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-3.webp"></a>
+                    <h4>Casual Hoodies</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹899</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-4.webp"></a>
+                    <h4>T-Shirts for Women</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹490</p>
+                </div>
+            </div>
+            <h2>Latest Releases</h2>
+            <div class="line1"></div>
+            <div class="child">
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-5.webp"></a>
+                    <h4>Adventure Hoodies</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹999</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-6.webp"></a>
+                    <h4>Red Unisex T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹899</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-7.webp"></a>
+                    <h4>Black Sweatpants for Women</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹599</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-8.webp"></a>
+                    <h4>Black Unisex Jeans</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹899</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-9.webp"></a>
+                    <h4>Blue Wardrobe Ties</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹459</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-10.webp"></a>
+                    <h4>Black T-Shirts for Men</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹999</p>
+                    
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-11.webp"></a>
+                    <h4>Sweatpants for Men</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₹489</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-12.webp"></a>
+                    <h4>Socks</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹599</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-13.webp"></a>
+                    <h4>Trekking Shoes</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₹499</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-14.webp"></a>
+                    <h4>Sports Wear</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₹720</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-15.webp"></a>
+                    <h4>Blue Hats</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₹789</p>
+                </div>
+                <div class="childprods">
+                    <a href="./product_details.html"><img src="./images/products/product-16.webp"></a>
+                    <h4>Black Ties</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹879</p>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <a href="./products.html">See More</a>
+        </div>
+        <div class="offer">
+            <div class="small-container">
+                <div class="child">
+                    <div class="halfchild">
+                        <img src="./images/promos/exclusive2.png" class="offer-img">
+                    </div>
+                    <div class="halfchild">
+                        <p>Exclusively avaliable here</p>
+                        <h1>Nike Sports Shoes</h1>
+                        <small>
+                            Step into victory with every stride – where performance and style collide.<br>
+                        </small>
+                        <a href="./product_details.html" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="small-container">
+                <h3><i class="fa fa-quote-left"></i> &emsp;See what our clients say about us -</h3>
+                <div class="child">
+                    <div class="testchild">
+                        <p>Absolutely loved the fine hoodies I brought from this place. 11/10 would buy from here again.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="./images/testimonials/jemma.jpg">
+                        <h3>Jemma Stone</h3>
+                    </div>
+                    <div class="testchild">
+                        <p>Jesus Christ who put up this ugly website. Recommend firing that guy. Jk good site pls no remove comment.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="./images/testimonials/rachel.jpg">
+                        <h3>Rachel Myers</h3>
+                    </div>
+                    <div class="testchild">
+                        <p>No wonder this site is so popular! It has the best prices in the city and really like the styles.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <img src="./images/testimonials/anne.jpg">
+                        <h3>Anne Jordan</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="child">
+                    <div class="footerChild1">
+                        <img src="images/header/logo.png">
+                        <h4>Mail us at: <a href="mailto:lokshidhass@gmail.com">lokshi@gmail.com</a></h4>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="linkgoeshere">Payments</a></li>
+                            <li><a href="linkgoeshere">Shipping</a></li>
+                            <li><a href="linkgoeshere">Return Policy</a></li>
+                            <li><a href="linkgoeshere">FAQ Topics</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Our Socials</h3>
+                        <ul>
+                            <li><a href="linkgoeshere">Instagram</a></li>
+                            <li><a href="linkgoeshere">Facebook</a></li>
+                            <li><a href="linkgoeshere">Twitter</a></li>
+                            <li><a href="linkgoeshere">Linkedin</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Registered Office</h3>
+                        <ul>
+                            <li>5th venue,</li>
+                            <li>Anna nagar,</li>
+                            <li>Chennai , TamilNadu.</li>
+                            <li>Chennai-600049</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="belowfooter">
+                    &copy; Stylotam , 2024 <br>
+                    Lokshidha , All rights reserved.
+                </div>
+            </div>
+        </div>
+        <script src="./src/js/script.js"></script>
     </body>
 </html>
